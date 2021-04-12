@@ -14,6 +14,9 @@ import os
 import sys
 import dj_database_url
 
+from dotenv import load_dotenv
+load_dotenv()
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -23,7 +26,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Per digital ocean
 from django.core.management.utils import get_random_secret_key
 SECRET_KEY = os.environ.get('SECRET_KEY', get_random_secret_key())
-
 
 # Digital Ocean
 DEBUG = os.getenv("DEBUG", "False") == "True"
