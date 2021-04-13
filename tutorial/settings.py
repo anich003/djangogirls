@@ -32,6 +32,7 @@ DEBUG = os.getenv("DEBUG", "False") == "True"
 
 # Digital Ocean
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+ALLOWED_HOSTS += ['*.anich003.me']
 
 # Digital Ocean
 DEVELOPMENT_MODE = os.getenv('DEVELOPMENT_MODE', 'False') == 'True'
